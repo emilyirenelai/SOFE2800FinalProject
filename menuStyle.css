@@ -54,11 +54,35 @@
 
   /* End of formatting from Bootstrap */
 
+  #topBack {
+    background-color: #CB9173;
+  }
+  
+  #backZone {
+    background-color: #562925;
+    padding: 3%;
+  }
+
+  #lightText {
+    color:#562925;
+    background-color:#2ec4b6;
+    border-radius: 15px;
+    padding:5%
+  }
+
+  #animback {
+    background-color:#562925;
+  }
+
   #blockone {
     background-color: #2ec4b6;
     
   }
 
   #blocktwo {
+    background-color: #FFFAD6;
+  }
+
+  #animrect{
     background-color: #FFFAD6;
   }
