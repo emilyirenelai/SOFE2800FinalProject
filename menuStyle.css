@@ -57,13 +57,25 @@
   #topBack {
     background-color: #CB9173;
   }
-  
+
+  #topButton {
+    background-color: #007a70;
+    outline: #562925;
+
+  }
+
   #backZone {
     background-color: #562925;
     padding: 3%;
   }
 
+  #descText {
+    color:#FFFAD6;
+    font-style: italic;
+  }
+
   #lightText {
+    
     color:#562925;
     background-color:#2ec4b6;
     border-radius: 15px;

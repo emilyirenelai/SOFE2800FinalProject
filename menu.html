@@ -4,12 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.104.2">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Include p5.js library-->
     <script src="p5.js"></script>
-    <title>MENU · c a f e</title>
+    <title>M E N U · k a f f a</title>
     <!-- Bootstrap Framework CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <!-- Bootstrap JavaScript Bundle with Popper -->
@@ -20,10 +18,10 @@
     <!-- <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="menuStyle.css">
 
-    <!-- import the webpage's javascript file -->
+    <!-- import the webpage's JavaScript file -->
     <script src="animations.js" defer></script>
     
-    <!-- import p5 things -->
+    <!-- import p5 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
     <script src="https://cdn.JsDelivr.net/gh/bmoren/p5.collide2D/p5.collide2d.min.js"></script>
 
@@ -40,11 +38,11 @@
     <div class="row py-lg-5" id="topBack">
       <div class="col-lg-6 col-md-8 mx-auto">
         
-        <h1 class="fw-light" id="lightText">MENU</h1>
-        <p class="lead text-muted">Our selection of only the finest beverages and foods.</p>
+        <h1 id="lightText">M E N U</h1>
+        <p  id="descText">Our selection of only the finest beverages and foods.</p>
         <p>
-          <a href="#" class="btn btn-primary my-2">Order Online</a>
-          <a href="#" class="btn btn-secondary my-2">Check Out</a>
+          <a href="#" class="btn btn-primary my-2" id="topButton">Order Online</a>
+          <a href="#" class="btn btn-secondary my-2" id="topButton">Check Out</a>
         </p>
       </div>
     </div>
@@ -57,21 +55,6 @@
         <div class="col">
           <div class="card shadow-sm">
             <img src="menuimg/01_Brewed_Coffee.gif" id="coffeeGIF" width="100%" height="100%" alt="Brewed Coffee">
-            <!-- <svg class="bd-placeholder-img card-img-top" 
-              width="100%" 
-              height="225" 
-              xmlns="http://www.w3.org/2000/svg" 
-              role="img" 
-              aria-label="Placeholder: Thumbnail" 
-              preserveAspectRatio="xMidYMid slice" 
-              focusable="false">
-                <title>Placeholder</title>
-                <rect id="animrect" width="100%" height="100%" fill="#007A70"/>
-                <!-- <script src="animations.js" defer></script>
-                
-                <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                  Image</text></svg> -->
-
             <div class="card-body" id = "blockone">
               <p class="card-text">Brewed Coffee</p>
               <div class="d-flex justify-content-between align-items-center">
@@ -87,18 +70,6 @@
         <div class="col">
           <div class="card shadow-sm">
             <img src="menuimg/02_Latte.gif" id="coffeeGIF" width="100%" height="100%" alt="Latte">
-            <!-- <svg class="bd-placeholder-img card-img-top" 
-            width="100%" 
-            height="225" 
-            xmlns="http://www.w3.org/2000/svg" 
-            role="img" 
-            aria-label="Placeholder: Thumbnail" 
-            preserveAspectRatio="xMidYMid slice" 
-            focusable="false">
-              <title>Placeholder</title>
-              <rect id="animrect" width="100%" height="100%" fill="#007A70"/>
-              <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                Image</text></svg> -->
             <div class="card-body" id = "blocktwo">
               <p class="card-text">Latte</p>
               <div class="d-flex justify-content-between align-items-center">
@@ -114,18 +85,6 @@
         <div class="col">
           <div class="card shadow-sm">
             <img src="menuimg/03_Cappucino.gif" id="coffeeGIF" width="100%" height="100%" alt="Cappucino">
-            <!-- <svg class="bd-placeholder-img card-img-top" 
-            width="100%" 
-            height="225" 
-            xmlns="http://www.w3.org/2000/svg" 
-            role="img" 
-            aria-label="Placeholder: Thumbnail" 
-            preserveAspectRatio="xMidYMid slice" 
-            focusable="false">
-              <title>Placeholder</title>
-              <rect id="animrect" width="100%" height="100%" fill="#007A70"/>
-              <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                Image</text></svg> -->
             <div class="card-body" id = "blockone">
               <p class="card-text">Cappucino</p>
               <div class="d-flex justify-content-between align-items-center">
@@ -142,18 +101,6 @@
         <div class="col">
           <div class="card shadow-sm">
             <img src="menuimg/04_Americano.gif" id="coffeeGIF" width="100%" height="100%" alt="Americano">
-            <!-- <svg class="bd-placeholder-img card-img-top" 
-            width="100%" 
-            height="225" 
-            xmlns="http://www.w3.org/2000/svg" 
-            role="img" 
-            aria-label="Placeholder: Thumbnail" 
-            preserveAspectRatio="xMidYMid slice" 
-            focusable="false">
-              <title>Placeholder</title>
-              <rect id="animrect" width="100%" height="100%" fill="#007A70"/>
-              <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                Image</text></svg> -->
             <div class="card-body" id = "blocktwo">
               <p class="card-text">Americano</p>
               <div class="d-flex justify-content-between align-items-center">
@@ -169,18 +116,6 @@
         <div class="col">
           <div class="card shadow-sm">
             <img src="menuimg/05_Hot_Chocolate.gif" id="coffeeGIF" width="100%" height="100%" alt="Hot Chocolate">
-            <!-- <svg class="bd-placeholder-img card-img-top" 
-            width="100%" 
-            height="225" 
-            xmlns="http://www.w3.org/2000/svg" 
-            role="img" 
-            aria-label="Placeholder: Thumbnail" 
-            preserveAspectRatio="xMidYMid slice" 
-            focusable="false">
-              <title>Placeholder</title>
-              <rect id="animrect" width="100%" height="100%" fill="#007A70"/>
-              <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                Image</text></svg> -->
             <div class="card-body" id = "blockone">
               <p class="card-text">Hot Chocolate</p>
               <div class="d-flex justify-content-between align-items-center">
@@ -196,18 +131,6 @@
         <div class="col">
           <div class="card shadow-sm">
             <img src="menuimg/06_Lemonade.gif" id="coffeeGIF" width="100%" height="100%" alt="Lemonade">
-            <!-- <svg class="bd-placeholder-img card-img-top" 
-            width="100%" 
-            height="225" 
-            xmlns="http://www.w3.org/2000/svg" 
-            role="img" 
-            aria-label="Placeholder: Thumbnail" 
-            preserveAspectRatio="xMidYMid slice" 
-            focusable="false">
-              <title>Placeholder</title>
-              <rect id="animrect" width="100%" height="100%" fill="#007A70"/>
-              <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                Image</text></svg> -->
             <div class="card-body" id = "blocktwo">
               <p class="card-text">Lemonade</p>
               <div class="d-flex justify-content-between align-items-center">
@@ -224,18 +147,6 @@
         <div class="col">
           <div class="card shadow-sm">
             <img src="menuimg/07_Steeped_Tea.gif" id="coffeeGIF" width="100%" height="100%" alt="Steeped Tea">
-            <!-- <svg class="bd-placeholder-img card-img-top" 
-            width="100%" 
-            height="225" 
-            xmlns="http://www.w3.org/2000/svg" 
-            role="img" 
-            aria-label="Placeholder: Thumbnail" 
-            preserveAspectRatio="xMidYMid slice" 
-            focusable="false">
-              <title>Placeholder</title>
-              <rect id="animrect" width="100%" height="100%" fill="#007A70"/>
-              <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                Image</text></svg> -->
             <div class="card-body" id = "blockone">
               <p class="card-text">Steeped Tea</p>
               <div class="d-flex justify-content-between align-items-center">
@@ -251,18 +162,6 @@
         <div class="col">
           <div class="card shadow-sm" id = "blocktwo">
             <img src="menuimg/08_Croissant.gif" id="coffeeGIF" width="100%" height="100%" alt="Croissant">
-            <!-- <svg class="bd-placeholder-img card-img-top" 
-            width="100%" 
-            height="225" 
-            xmlns="http://www.w3.org/2000/svg" 
-            role="img" 
-            aria-label="Placeholder: Thumbnail" 
-            preserveAspectRatio="xMidYMid slice" 
-            focusable="false">
-              <title>Placeholder</title>
-              <rect id="animrect" width="100%" height="100%" fill="#007A70"/>
-              <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                Image</text></svg> -->
             <div class="card-body">
               <p class="card-text">Croissant</p>
               <div class="d-flex justify-content-between align-items-center">
