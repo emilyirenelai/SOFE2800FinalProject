@@ -1,8 +1,8 @@
 <?php
 
-function emptyInputSignup($name, $email, $username, $password, $passwordRepeat){
+function emptyInputSignup($name, $email, $username, $password, $passwordRepeat, $cardNo, $cardName, $cardCVC){
     $result = null;
-    if(empty($name) || empty($email) || empty($username) || empty($password) || empty($passwordRepeat)){
+    if(empty($name) || empty($email) || empty($username) || empty($password) || empty($passwordRepeat) || empty($cardNo) || empty($cardName) || empty($cardCVC)){
         $result = true; 
     }
     else{
@@ -73,11 +73,15 @@ function userExists($conn, $username, $email){
     
 }
 
-function createUser($conn, $name, $email, $username, $password){
+function createUser($conn, $name, $email, $username, $password, $cardNo, $cardName, $cardCVC){
     $stmt = $conn->prepare("insert into users(usersName, usersEmail, usersUID, usersPwd) values(?, ?, ?, ?)");
+    $stmt1 = $conn->prepare("insert into credit(creditID, creditNumber, creditName, creditCVC) values(?, ?, ?, ?)");
     $hashedPwd = password_hash($password, PASSWORD_DEFAULT);
 	$stmt->bind_param("ssss", $name, $email, $username, $hashedPwd);
+    $stmt1->bind_param("ssss", $username, $cardNo, $cardName, $cardCVC);
+    $stmt1->execute();
 	$stmt->execute();
+    $stmt1->close();
 	$stmt->close();
 	$conn->close();
 
@@ -119,6 +123,5 @@ function loginUser($conn, $username, $password){
         $_SESSION["name"] = $uidExists["usersName"];
         header("location: ../index.php");
         exit();
-
     }
 }

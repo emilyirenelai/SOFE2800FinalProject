@@ -6,7 +6,7 @@
 </style>
 
 
-<footer class="text-center text-md-start text-muted fixed-bottom">
+<footer class="text-center text-md-start text-muted">
   <!-- Section: Links  -->
   <section class="">
   <!-- Copyright -->

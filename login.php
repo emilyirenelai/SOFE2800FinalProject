@@ -24,6 +24,9 @@
     legend{
         font-size: 2.5em;
     }
+    #spacer{
+        height: 30.8vh;
+    }
 </style>
 
 <script> //make this page active in the nav
@@ -51,6 +54,7 @@
         <button type="submit" class="btn btn-outline-light" name="submit">Login</button>
     </div>
     </form>
+    <div class="container" id="spacer"></div>
 </div>
 </section>
 

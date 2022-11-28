@@ -32,7 +32,7 @@
 </style>
 
 <section class="signup-form">
-<br><br><br><br>
+<br><br><br>
     <!--<h2>Sign up!</h2>
             <form action="includes/signup.inc.php" method="post">
                 <input type="text" name="name" placeholder="Full name">
@@ -75,12 +75,29 @@
         <input type="password" class="form-control" id="pwdr" placeholder="Re-enter Password" name="passwordRepeat">
         </div>
     </div>
+    <div class="row mb-3">
+        <label for="cardNo" class="col-sm-2 col-form-label" id="label">Card Number:</label>
+        <div class="col-sm-10">
+        <input type="text" class="form-control" id="cardNo" placeholder="XXXXXXXXXXXXXXXX" name="cardNo" maxlength="16">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="cardname" class="col-sm-2 col-form-label" id="label">Name On Card:</label>
+        <div class="col-sm-10">
+        <input type="text" class="form-control" id="cardname" placeholder="Name" name="cardName">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="cardCVC" class="col-sm-2 col-form-label" id="label">Card CVC:</label>
+        <div class="col-sm-10">
+        <input type="text" class="form-control" id="cardCVC" placeholder="CVC" name="cardCVC" maxlength="3">
+        </div>
+    </div>
     <div class="container">
         <button type="submit" class="btn btn-outline-light" name="submit">Sign up</button>
     </div>
     </form>
 </div>
-
 </section>
 
 <?php

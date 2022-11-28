@@ -6,11 +6,14 @@ if (isset($_POST["submit"])){
     $username = $_POST["Uname"];
     $password = $_POST["password"];
     $passwordRepeat = $_POST["passwordRepeat"];
+    $cardNo = $_POST["cardNo"];
+    $cardName = $_POST["cardName"];
+    $cardCVC = $_POST["cardCVC"];
 
     require_once 'dbh.inc.php';
     require_once 'functions.inc.php';
 
-    if(emptyInputSignup($name, $email, $username, $password, $passwordRepeat) !== false){
+    if(emptyInputSignup($name, $email, $username, $password, $passwordRepeat, $cardNo, $cardName, $cardCVC) !== false){
         header("location: ../signup.php?error=emptyInput");
         exit();
     }
@@ -31,7 +34,7 @@ if (isset($_POST["submit"])){
         exit();
     }
 
-    createUser($conn, $name, $email, $username, $password);
+    createUser($conn, $name, $email, $username, $password, $cardNo, $cardName, $cardCVC);
 
 }
 else{

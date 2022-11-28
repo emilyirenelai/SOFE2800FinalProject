@@ -17,7 +17,7 @@
             }
         </style>
     </head>
-    <body>
+    <body class="d-flex flex-column min-vh-100">
         <nav class="navbar navbar-expand fixed-top">
             <!-- Container wrapper -->
             <div class="container-fluid">
@@ -64,7 +64,7 @@
               <div class="d-flex align-items-center">
               <?php 
                 if(isset($_SESSION["useruid"])){
-                  echo '<span class="navbar-text">Welcome ' . $_SESSION["useruid"] . '</span>';
+                  echo '<span class="navbar-text w-100">Welcome ' . $_SESSION["name"] . '</span>';
                   echo '<ul class="navbar-nav me-auto mb-2 mb-lg-0">';
                   echo '<li class="nav-item">';
                   echo '<a class="nav-link" href="includes/signout.inc.php">Sign out</a>';
