@@ -1,0 +1,43 @@
+body {
+    background-color: #CB9173;
+}
+
+#homepageGIF {
+    width:80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+    width: 50%;
+    border: 5px solid #562925;
+}
+
+#slideImg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border: 5px solid #562925;
+}
+
+#cardBody {
+    background-color: #FFFAD6;
+}
+
+#botButton {
+    background-color: #007a70;
+}
+
+h1{
+    text-align: center;
+    color: #FFFAD6;
+    background-color: #562925;
+    padding:1.5%;
+}
+
+h4{
+    text-align: center;
+    background-color: #562925;
+    color: #FFFAD6;
+    padding: 1%;
+}
