@@ -10,7 +10,7 @@ var canvas;
 const NUM_DROPS = 50;
 
 function setup() {
-  canvas = createCanvas(width*25, height*4.25);
+  canvas = createCanvas(width*25, height*4.2);
   canvas.position(0,0);
   colorMode(HSB, 360, 100, 100);
   canvas.style('z-index', '-1');
@@ -34,7 +34,7 @@ function setup() {
 }
 
 function draw() {
-  background(0, 0, 95);
+  background(53, 16, 100);
 
   for (let i = 0; i < drops.length; i++) {
     // Code for droplet 1
