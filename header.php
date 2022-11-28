@@ -51,7 +51,7 @@
                     <a class="nav-link" href="index.php" id="home"><b>Home</b></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#" id="orders"><b>Orders</b></a>
+                    <a class="nav-link" href="menu.php" id="orders"><b>Orders</b></a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#" id="about"><b>About Us</b></a>
