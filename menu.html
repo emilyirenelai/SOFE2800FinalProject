@@ -1,12 +1,14 @@
+<!-- Menu page-->
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.104.2">
-    <title>MENU · c a f e</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Include p5.js library-->
+    <script src="p5.js"></script>
+    <title>M E N U · k a f f a</title>
     <!-- Bootstrap Framework CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <!-- Bootstrap JavaScript Bundle with Popper -->
@@ -14,227 +16,431 @@
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/album/">
     
-    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="menuStyle.css">
+
+    <!-- import the webpage's JavaScript file -->
+    <script src="animations.js" defer></script>
+    
+    <!-- import p5 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
+    <script src="https://cdn.JsDelivr.net/gh/bmoren/p5.collide2D/p5.collide2d.min.js"></script>
 
   </head>
   <body>
     
-<header>
-  <div class="collapse bg-dark" id="navbarHeader">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8 col-md-7 py-4">
-          <h4 class="text-white">About</h4>
-          <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
+    <header>
+
+    </header>
+
+    <main>
+
+      <section class="py-5 text-center container" id="animBack">
+        <div class="row py-lg-5" id="topBack">
+          <div class="col-lg-6 col-md-8 mx-auto">
+        
+            <h1 id="lightText">M E N U</h1>
+            <p  id="descText">Our selection of only the finest beverages and foods.</p>
+            <p>
+              <a href="#" class="btn btn-primary my-2" id="topButton">Order Online</a>
+              <a href="#" class="btn btn-secondary my-2" id="topButton">Check Out</a>
+            </p>
+          </div>
         </div>
-        <div class="col-sm-4 offset-md-1 py-4">
-          <h4 class="text-white">Contact</h4>
-          <ul class="list-unstyled">
-            <li><a href="#" class="text-white">Follow on Twitter</a></li>
-            <li><a href="#" class="text-white">Like on Facebook</a></li>
-            <li><a href="#" class="text-white">Email me</a></li>
-          </ul>
+      </section>
+
+      <div class="album py-5 bg-light">
+        <div class="container">     
+      
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="backZone">
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="static" src="menuimg/01_BC.png" width="100%" height="100%" alt="Brewed Coffee">
+                <img class="active" src="menuimg/01_Brewed_Coffee.gif" id="coffeeGIF" width="100%" height="100%" alt="Brewed Coffee">
+                <div class="card-body" id = "blockone">
+                  <p class="card-text">Brewed Coffee</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary" id="coffeeOrder">Order</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#brewCoffeeModal" >Info</button>
+                    </div>
+                    <small class="text-muted">$1.50</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="menuimg/02_Latte.gif" id="coffeeGIF" width="100%" height="100%" alt="Latte">
+                <div class="card-body" id = "blocktwo">
+                  <p class="card-text">Latte</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary" id="latteOrder">Order</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#latteModal">Info</button>
+                    </div>
+                    <small class="text-muted">$3.50</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="menuimg/03_Cappucino.gif" id="coffeeGIF" width="100%" height="100%" alt="Cappucino">
+                <div class="card-body" id = "blockone">
+                  <p class="card-text">Cappucino</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary" id="cappOrder">Order</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#cappModal">Info</button>
+                    </div>
+                    <small class="text-muted">$3.50</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="menuimg/04_Americano.gif" id="coffeeGIF" width="100%" height="100%" alt="Americano">
+                <div class="card-body" id = "blocktwo">
+                  <p class="card-text">Americano</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary" id="amerOrder">Order</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#amerModal">Info</button>
+                    </div>
+                    <small class="text-muted">$3.50</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="menuimg/05_Hot_Chocolate.gif" id="coffeeGIF" width="100%" height="100%" alt="Hot Chocolate">
+                <div class="card-body" id = "blockone">
+                  <p class="card-text">Hot Chocolate</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary" id="hotchocOrder">Order</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#hotchocModal">Info</button>
+                    </div>
+                    <small class="text-muted">$2.50</small>
+                  </div>
+                </div>
+              </div>
+              </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="menuimg/06_Lemonade.gif" id="coffeeGIF" width="100%" height="100%" alt="Lemonade">
+                <div class="card-body" id = "blocktwo">
+                  <p class="card-text">Lemonade</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary" id="lemonOrder">Order</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#lemonModal">Info</button>
+                    </div>
+                    <small class="text-muted">$2.00</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="menuimg/07_Steeped_Tea.gif" id="coffeeGIF" width="100%" height="100%" alt="Steeped Tea">
+                <div class="card-body" id = "blockone">
+                  <p class="card-text">Steeped Tea</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary" id="teaOrder">Order</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#teaModal">Info</button>
+                    </div>
+                    <small class="text-muted">$1.50</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm" id = "blocktwo">
+                <img src="menuimg/08_Croissant.gif" id="coffeeGIF" width="100%" height="100%" alt="Croissant">
+                <div class="card-body">
+                  <p class="card-text">Croissant</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary" id="croisOrder">Order</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#croisModal">Info</button>
+                    </div>
+                    <small class="text-muted">$2.00</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="menuimg/09_Muffin.gif" id="coffeeGIF" width="100%" height="100%" alt="Muffin">
+                <!-- <svg class="bd-placeholder-img card-img-top" 
+                width="100%" 
+                height="225" 
+                xmlns="http://www.w3.org/2000/svg" 
+                role="img" 
+                aria-label="Placeholder: Thumbnail" 
+                preserveAspectRatio="xMidYMid slice" 
+                focusable="false">
+                  <title>Placeholder</title>
+                  <rect id="animrect" width="100%" height="100%" fill="#007A70"/>
+                  <text x="50%" y="50%" fill="#eceeef" dy=".3em">
+                    Image</text></svg> -->
+                <div class="card-body" id = "blockone">
+                  <p class="card-text">Muffin</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary" id="muffOrder">Order</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#muffModal">Info</button>
+                    </div>
+                    <small class="text-muted">$1.75</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Popup for Brewed Coffee Info -->
+            <div class="modal fade" id="brewCoffeeModal" tabindex="-1" aria-labelledby="brewCoffeeModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="brewCoffeeModalLabel">Brewed Coffee</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Our brewed coffee is imported fresh from Ethiopia.</p>
+                    <p>Customization Options:</p>
+                    <ul>
+                      <li>Size: Small ($1.50), Medium ($1.75), Large ($2.00), Extra Large ($2.25)</li>
+                      <li>Dairy: Cream, 2% Milk, Skim Milk, Almond Milk, Oat Milk</li>
+                      <li>Sweeteners: Sugar, Sweetener</li>
+                      <li>Espresso Shots (Add $1.00)</li>
+                      <li>Flavour Shots (Add $0.25): Chocolate Syrup, Caramel Syrup, Vanilla Syrup</li>
+                    </ul>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="topButton">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Popup for Latte Info -->
+            <div class="modal fade" id="latteModal" tabindex="-1" aria-labelledby="latteModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+               <div class="modal-content">
+                 <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="latteModalLabel">Latte</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                 <div class="modal-body">
+                    <p>Our latte is made with fresh Ethiopian coffee and the finest milks.</p>
+                   <p>Customization Options:</p>
+                    <ul>
+                      <li>Size: Small ($3.50), Medium ($3.75), Large ($4.00), Extra Large ($4.25)</li>
+                      <li>Dairy: Cream, 2% Milk, Skim Milk, Almond Milk, Oat Milk</li>
+                      <li>Sweeteners: Sugar, Sweetener</li>
+                      <li>Espresso Shots (Add $1.00)</li>
+                      <li>Flavour Shots (Add $0.25): Chocolate Syrup, Caramel Syrup, Vanilla Syrup</li>
+                   </ul>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="topButton">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Popup for Cappucino Info -->
+            <div class="modal fade" id="cappModal" tabindex="-1" aria-labelledby="cappModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="cappModalLabel">Cappucino</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                   <p>Our cappucino is made with fresh Ethiopian coffee and the finest milks.</p>
+                   <p>Customization Options:</p>
+                    <ul>
+                      <li>Size: Small ($3.50), Medium ($3.75), Large ($4.00), Extra Large ($4.25)</li>
+                      <li>Dairy: Cream, 2% Milk, Skim Milk, Almond Milk, Oat Milk</li>
+                      <li>Sweeteners: Sugar, Sweetener</li>
+                      <li>Espresso Shots (Add $1.00)</li>
+                      <li>Flavour Shots (Add $0.25): Chocolate Syrup, Caramel Syrup, Vanilla Syrup</li>
+                    </ul>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="topButton">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Popup for Americano Info -->
+            <div class="modal fade" id="amerModal" tabindex="-1" aria-labelledby="amerModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="amerModalLabel">Americano</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Our americano is made with fresh espresso.</p>
+                    <p>Customization Options:</p>
+                    <ul>
+                      <li>Size: Small ($3.50), Medium ($3.75), Large ($4.00), Extra Large ($4.25)</li>
+                      <li>Dairy: Cream, 2% Milk, Skim Milk, Almond Milk, Oat Milk</li>
+                      <li>Sweeteners: Sugar, Sweetener</li>
+                      <li>Espresso Shots (Add $1.00)</li>
+                      <li>Flavour Shots (Add $0.25): Chocolate Syrup, Caramel Syrup, Vanilla Syrup</li>
+                    </ul>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="topButton">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Popup for Hot Chocolate Info -->
+            <div class="modal fade" id="hotchocModal" tabindex="-1" aria-labelledby="hotchocLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="hotchocLabel">Hot Chocolate</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Our hot chocolate is made with fair trade sourced cocoa powder.</p>
+                    <p>Customization Options:</p>
+                    <ul>
+                      <li>Size: Small ($2.50), Medium ($2.75), Large ($3.00), Extra Large ($3.25)</li>
+                      <li>Dairy: Cream, 2% Milk, Skim Milk, Almond Milk, Oat Milk</li>
+                      <li>Sweeteners: Sugar, Sweetener</li>
+                      <li>Espresso Shots (Add $1.00)</li>
+                      <li>Flavour Shots (Add $0.25): Chocolate Syrup, Caramel Syrup, Vanilla Syrup</li>
+                    </ul>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="topButton">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Popup for Lemonade Info -->
+            <div class="modal fade" id="lemonModal" tabindex="-1" aria-labelledby="lemonModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="lemonModalLabel">Lemonade</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Our lemonade is made with fresh Italian lemons.</p>
+                    <p>Customization Options:</p>
+                    <ul>
+                      <li>Size: Small ($2.00), Medium ($2.50), Large ($3.00)</li>
+                    </ul>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="topButton">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Popup for Tea Info -->
+            <div class="modal fade" id="teaModal" tabindex="-1" aria-labelledby="teaModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="teaModalLabel">Steeped Tea</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Our tea is freshly steeped.</p>
+                    <p>Customization Options:</p>
+                    <ul>
+                      <li>Size: Small ($1.50), Medium ($1.75), Large ($2.00), Extra Large ($2.25)</li>
+                      <li>Dairy: Cream, 2% Milk, Skim Milk, Almond Milk, Oat Milk</li>
+                      <li>Sweeteners: Sugar, Sweetener</li>
+                    </ul>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="topButton">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Popup for Croissant Info -->
+            <div class="modal fade" id="croisModal" tabindex="-1" aria-labelledby="croisModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="croisModalLabel">Croissant</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Our croissants are freshly baked in-store.</p>
+                    <p>Customization Options:</p>
+                    <ul>
+                      <li>Type: Plain ($2.00), Chocolate ($2.25)</li>
+                    </ul>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="topButton">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+           <!-- Popup for Muffin Info -->
+            <div class="modal fade" id="muffModal" tabindex="-1" aria-labelledby="muffModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="muffModalLabel">Muffin</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Our muffins are freshly baked in-store.</p>
+                    <p>Customization Options:</p>
+                    <ul>
+                      <li>Type: Chocolate Chip ($1.75), Blueberry ($1.75), Carrot ($1.75) Raisin Bran ($1.75)</li>
+                    </ul>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="topButton">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+        
+
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="navbar navbar-dark bg-dark shadow-sm">
-    <div class="container">
-      <a href="#" class="navbar-brand d-flex align-items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
-        <strong>Album</strong>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    </div>
-  </div>
-</header>
-
-<main>
-
-  <section class="py-5 text-center container">
-    <div class="row py-lg-5">
-      <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">Album example</h1>
-        <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
-        <p>
-          <a href="#" class="btn btn-primary my-2">Main call to action</a>
-          <a href="#" class="btn btn-secondary my-2">Secondary action</a>
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <div class="album py-5 bg-light">
-    <div class="container">
-
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-</main>
-
-<footer class="text-muted py-5">
-  <div class="container">
-    <p class="float-end mb-1">
-      <a href="#">Back to top</a>
-    </p>
-    <p class="mb-1">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-    <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="../getting-started/introduction/">getting started guide</a>.</p>
-  </div>
-</footer>
 
 
-    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    </main>
+
+    <footer class="text-muted py-5">
+
+    </footer>
+
+
+        <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
       
   </body>
+
 </html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <section class="signup-form">
+            <form action="signup.inc.php" method="post">
+                <input type="text" name="name" placeholder="Full name">
+                <input type="text" name="email" placeholder="Email">
+                <input type="text" name="Uname" placeholder="Username">
+                <input type="password" name="password" placeholder="Password">
+                <input type="password" name="repeatPassword" placeholder="Repeat Password">
+                <button type="submit" name="submit">Sign Up!</button>
+                <div class="row mb-3">
+                    <label for="cardnumber" class="col-sm-2 col-form-label" id="label">Card Number:</label>
+                    <div class="col-sm-10">
+                    <input type="text" class="form-control" id="cardnumber" placeholder="XXXXXXXXXXXXXXXX" name="cardNo">
+                    </div>
+                <div class="row mb-3">
+                    <label for="cardname" class="col-sm-2 col-form-label" id="label">Name On Card:</label>
+                    <div class="col-sm-10">
+                    <input type="text" class="form-control" id="cardname" placeholder="Name" name="cardName">
+                </div>
+                <div class="row mb-3">
+                    <label for="cardCVC" class="col-sm-2 col-form-label" id="label">Card CVC:</label>
+                    <div class="col-sm-10">
+                    <input type="text" class="form-control" id="cardCVC" placeholder="CVC" name="cardCVC">
+                </div>
+            </form>
+        </section>
+    </body>
+</html>
