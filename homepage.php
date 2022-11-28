@@ -56,7 +56,7 @@
             </div>
           </div>
           <div class="carousel-item">
-            <img src="menuimg/coffeeslide2.jpg" class="d-block w-80" id="slideImg" alt="...">
+            <img src="menuimg/coffeeslide4.jpg" class="d-block w-80" id="slideImg" alt="...">
             <div class="carousel-caption d-none d-md-block">
               <h5>Our Cafe</h5>
               <p>Come join us in our calming, comfortable cafe.</p>
