@@ -22,7 +22,9 @@
     <link rel="stylesheet" href="menuStyle.css">
 
     <!-- import the webpage's JavaScript file -->
-    <script src="animations.js" defer></script>
+    <div class="headAnim">
+      <script src="animations.js" defer></script>
+    </div>
     
     <!-- import p5 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
@@ -43,10 +45,7 @@
         
             <h1 id="lightText">M E N U</h1>
             <p  id="descText">Our selection of only the finest beverages and foods.</p>
-            <p>
-              <a href="#" class="btn btn-primary my-2" id="topButton">Order Online</a>
-              <a href="#" class="btn btn-secondary my-2" id="topButton">Check Out</a>
-            </p>
+
           </div>
         </div>
       </section>
@@ -57,8 +56,7 @@
           <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="backZone">
             <div class="col">
               <div class="card shadow-sm">
-                <img class="static" src="menuimg/01_BC.png" width="100%" height="100%" alt="Brewed Coffee">
-                <img class="active" src="menuimg/01_Brewed_Coffee.gif" id="coffeeGIF" width="100%" height="100%" alt="Brewed Coffee">
+                <img src="menuimg/01_BC.png" onmouseenter="this.src ='menuimg/01_Brewed_Coffee.gif';" onmouseout="this.src = 'menuimg/01_BC.png';" alt="Brewed Coffee">
                 <div class="card-body" id = "blockone">
                   <p class="card-text">Brewed Coffee</p>
                   <div class="d-flex justify-content-between align-items-center">
@@ -73,7 +71,7 @@
             </div>
             <div class="col">
               <div class="card shadow-sm">
-                <img src="menuimg/02_Latte.gif" id="coffeeGIF" width="100%" height="100%" alt="Latte">
+                <img src="menuimg/02_L.png" onmouseenter="this.src ='menuimg/02_Latte.gif';" onmouseout="this.src = 'menuimg/02_L.png';" alt="Latte">
                 <div class="card-body" id = "blocktwo">
                   <p class="card-text">Latte</p>
                   <div class="d-flex justify-content-between align-items-center">
@@ -88,7 +86,7 @@
             </div>
             <div class="col">
               <div class="card shadow-sm">
-                <img src="menuimg/03_Cappucino.gif" id="coffeeGIF" width="100%" height="100%" alt="Cappucino">
+                <img src="menuimg/03_C.png" onmouseenter="this.src ='menuimg/03_Cappucino.gif';" onmouseout="this.src = 'menuimg/03_C.png';" alt="Cappucino">
                 <div class="card-body" id = "blockone">
                   <p class="card-text">Cappucino</p>
                   <div class="d-flex justify-content-between align-items-center">
@@ -104,7 +102,7 @@
 
             <div class="col">
               <div class="card shadow-sm">
-                <img src="menuimg/04_Americano.gif" id="coffeeGIF" width="100%" height="100%" alt="Americano">
+                <img src="menuimg/4_A.png" onmouseenter="this.src ='menuimg/04_Americano.gif';" onmouseout="this.src = 'menuimg/04_A.png';" alt="Americano">
                 <div class="card-body" id = "blocktwo">
                   <p class="card-text">Americano</p>
                   <div class="d-flex justify-content-between align-items-center">
@@ -119,7 +117,7 @@
             </div>
             <div class="col">
               <div class="card shadow-sm">
-                <img src="menuimg/05_Hot_Chocolate.gif" id="coffeeGIF" width="100%" height="100%" alt="Hot Chocolate">
+                <img src="menuimg/05_HC.png" onmouseenter="this.src ='menuimg/05_Hot_Chocolate.gif';" onmouseout="this.src = 'menuimg/05_HC.png';" alt="Hot Chocolate">
                 <div class="card-body" id = "blockone">
                   <p class="card-text">Hot Chocolate</p>
                   <div class="d-flex justify-content-between align-items-center">
@@ -134,7 +132,7 @@
               </div>
             <div class="col">
               <div class="card shadow-sm">
-                <img src="menuimg/06_Lemonade.gif" id="coffeeGIF" width="100%" height="100%" alt="Lemonade">
+                <img src="menuimg/06_L.png" onmouseenter="this.src ='menuimg/06_Lemonade.gif';" onmouseout="this.src = 'menuimg/06_L.png';" alt="Lemonade">
                 <div class="card-body" id = "blocktwo">
                   <p class="card-text">Lemonade</p>
                   <div class="d-flex justify-content-between align-items-center">
@@ -150,7 +148,7 @@
 
             <div class="col">
               <div class="card shadow-sm">
-                <img src="menuimg/07_Steeped_Tea.gif" id="coffeeGIF" width="100%" height="100%" alt="Steeped Tea">
+                <img src="menuimg/07_ST.png" onmouseenter="this.src ='menuimg/07_Steeped_Tea.gif';" onmouseout="this.src = 'menuimg/07_ST.png';" alt="Steeped Tea">
                 <div class="card-body" id = "blockone">
                   <p class="card-text">Steeped Tea</p>
                   <div class="d-flex justify-content-between align-items-center">
@@ -165,7 +163,7 @@
             </div>
             <div class="col">
               <div class="card shadow-sm" id = "blocktwo">
-                <img src="menuimg/08_Croissant.gif" id="coffeeGIF" width="100%" height="100%" alt="Croissant">
+                <img src="menuimg/08_C.png" onmouseenter="this.src ='menuimg/08_Croissant.gif';" onmouseout="this.src = 'menuimg/08_C.png';" alt="Croissant">
                 <div class="card-body">
                   <p class="card-text">Croissant</p>
                   <div class="d-flex justify-content-between align-items-center">
@@ -180,19 +178,7 @@
             </div>
             <div class="col">
               <div class="card shadow-sm">
-                <img src="menuimg/09_Muffin.gif" id="coffeeGIF" width="100%" height="100%" alt="Muffin">
-                <!-- <svg class="bd-placeholder-img card-img-top" 
-                width="100%" 
-                height="225" 
-                xmlns="http://www.w3.org/2000/svg" 
-                role="img" 
-                aria-label="Placeholder: Thumbnail" 
-                preserveAspectRatio="xMidYMid slice" 
-                focusable="false">
-                  <title>Placeholder</title>
-                  <rect id="animrect" width="100%" height="100%" fill="#007A70"/>
-                  <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                    Image</text></svg> -->
+                <img src="menuimg/09_M.png" onmouseenter="this.src ='menuimg/09_Muffin.gif';" onmouseout="this.src = 'menuimg/09_M.png';" alt="Muffin">
                 <div class="card-body" id = "blockone">
                   <p class="card-text">Muffin</p>
                   <div class="d-flex justify-content-between align-items-center">

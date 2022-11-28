@@ -54,6 +54,10 @@
 
   /* End of formatting from Bootstrap */
 
+  .headAnim {
+    width: fit-content ;
+  }
+
   #topBack {
     background-color: #CB9173;
   }
