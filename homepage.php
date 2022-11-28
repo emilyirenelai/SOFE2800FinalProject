@@ -11,7 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Include p5.js library-->
     <script src="p5.js"></script>
-    <title>M E N U · k a f f a</title>
+    <title>k a f f a</title>
     <!-- Bootstrap Framework CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <!-- Bootstrap JavaScript Bundle with Popper -->
@@ -82,7 +82,7 @@
 
       </div>
 
-      <div class="row">
+      <div class="row" id="space">
         <div class="col-sm-3">
           <div class="card">
             <img src="menuimg/01_BC.png" class="card-img-top" id="cardBot" alt="...">

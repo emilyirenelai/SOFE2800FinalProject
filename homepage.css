@@ -28,6 +28,10 @@ body {
     background-color: #007a70;
 }
 
+#space {
+    padding:1%;
+}
+
 h1{
     text-align: center;
     color: #FFFAD6;
