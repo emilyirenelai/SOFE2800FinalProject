@@ -54,10 +54,6 @@
 
   /* End of formatting from Bootstrap */
 
-  .headAnim {
-    width: fit-content ;
-  }
-
   #topBack {
     background-color: #CB9173;
   }
@@ -111,3 +107,10 @@
   .static:hover {
     opacity:0;
   }
+
+
+.icon-sm {
+    width: 2rem;
+    height: 2rem;
+    
+}

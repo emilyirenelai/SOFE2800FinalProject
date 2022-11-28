@@ -121,7 +121,18 @@ function loginUser($conn, $username, $password){
         $_SESSION["userid"] = $uidExists["usersID"];
         $_SESSION["useruid"] = $uidExists["usersUID"];
         $_SESSION["name"] = $uidExists["usersName"];
-        header("location: ../index.php");
+        header("location: ../home.php");
         exit();
     }
+}
+
+function logOrder($conn, $item, $size, $ES, $CS, $VS, $CaS, $crm, $sug){
+    session_start();
+    $username = $_SESSION["useruid"];
+    $bill = "100";
+    $stmt = $conn->prepare("insert into orders(orderUID, orderItem, orderSize, orderCreamer, orderSugar, orderES, orderChoco, orderCara, orderVan, orderBill) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("ssssssssss", $username, $item, $size, $crm, $sug, $ES, $CS, $CaS, $VS, $bill);
+    $stmt->execute();
+    $stmt->close();
+    header("location: ../menu.php?error=orderPlaced");
 }

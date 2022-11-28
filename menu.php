@@ -61,7 +61,7 @@
                   <p class="card-text">Brewed Coffee</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" id="coffeeOrder">Order</button>
+                      <button type="submit" class="btn btn-sm btn-outline-secondary" id="coffeeOrder" data-bs-toggle="modal" data-bs-target="#orderCF">Order</button>
                       <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#brewCoffeeModal" >Info</button>
                     </div>
                     <small class="text-muted">$1.50</small>
@@ -76,7 +76,7 @@
                   <p class="card-text">Latte</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" id="latteOrder">Order</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary" id="latteOrder" data-bs-toggle="modal" data-bs-target="#orderLT">Order</button>
                       <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#latteModal">Info</button>
                     </div>
                     <small class="text-muted">$3.50</small>
@@ -91,7 +91,7 @@
                   <p class="card-text">Cappucino</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" id="cappOrder">Order</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary" id="cappOrder" data-bs-toggle="modal" data-bs-target="#orderCP">Order</button>
                       <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#cappModal">Info</button>
                     </div>
                     <small class="text-muted">$3.50</small>
@@ -107,7 +107,7 @@
                   <p class="card-text">Americano</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" id="amerOrder">Order</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary" id="amerOrder" data-bs-toggle="modal" data-bs-target="#orderA">Order</button>
                       <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#amerModal">Info</button>
                     </div>
                     <small class="text-muted">$3.50</small>
@@ -122,7 +122,7 @@
                   <p class="card-text">Hot Chocolate</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" id="hotchocOrder">Order</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary" id="hotchocOrder" data-bs-toggle="modal" data-bs-target="#orderHC">Order</button>
                       <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#hotchocModal">Info</button>
                     </div>
                     <small class="text-muted">$2.50</small>
@@ -137,7 +137,7 @@
                   <p class="card-text">Lemonade</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" id="lemonOrder">Order</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary" id="lemonOrder" data-bs-toggle="modal" data-bs-target="#orderL">Order</button>
                       <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#lemonModal">Info</button>
                     </div>
                     <small class="text-muted">$2.00</small>
@@ -153,7 +153,7 @@
                   <p class="card-text">Steeped Tea</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" id="teaOrder">Order</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary" id="teaOrder" data-bs-toggle="modal" data-bs-target="#orderST">Order</button>
                       <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#teaModal">Info</button>
                     </div>
                     <small class="text-muted">$1.50</small>
@@ -168,7 +168,7 @@
                   <p class="card-text">Croissant</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" id="croisOrder">Order</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary" id="croisOrder" id="teaOrder" data-bs-toggle="modal" data-bs-target="#orderCS">Order</button>
                       <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#croisModal">Info</button>
                     </div>
                     <small class="text-muted">$2.00</small>
@@ -183,10 +183,738 @@
                   <p class="card-text">Muffin</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" id="muffOrder">Order</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary" id="muffOrder" id="teaOrder" data-bs-toggle="modal" data-bs-target="#orderM">Order</button>
                       <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#muffModal">Info</button>
                     </div>
                     <small class="text-muted">$1.75</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Order Form for coffee -->
+
+            <div class="modal fade" id="orderLT" tabindex="-1" aria-labelledby="brewCoffeeModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="brewCoffeeModalLabel">Drinks</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                  <form action="includes/orderLT.inc.php" method="post">
+                    <legend>Order!</legend>
+                    <div class="row mb-3">
+                        <label for="size" class="col-sm-2 col-form-label" id="label">Size: </label>
+                        <div class="col-sm-10">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="size" id="small" value="S" checked>
+                          <label class="form-check-label" for="small">
+                            Small
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="size" id="medium" value="M">
+                          <label class="form-check-label" for="medium">
+                            Medium
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="size" id="large" value="L">
+                          <label class="form-check-label" for="large">
+                            Large
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="size" id="XL" value="XL">
+                          <label class="form-check-label" for="XL">
+                            Extra Large
+                          </label>
+                        </div>
+                        </div>
+                    <div class="row">
+                        <div class="col-12">
+                          <div class="d-flex justify-content-between">
+                              <div>
+                                <p class="text-dark">Espresso Shots</p>
+                              </div>
+                              <div class="input-group w-auto justify-content-end align-items-center">
+                                <input type="number" step="1" max="9" min="0" value="0" name="ES" class="quantity-field border-1 text-center w-100">
+                              </div>
+                          </div>
+                        </div>
+                      <div class="col-12">
+                          <div class="d-flex justify-content-between">
+                              <div>
+                                <p class="text-dark">Chocolate Shots</p>
+                              </div>
+                              <div class="input-group w-auto justify-content-end align-items-center">
+                                <input type="number" step="1" max="9" min="0" value="0" name="CS" class="quantity-field border-1 text-center w-100">
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                          <div class="d-flex justify-content-between">
+                              <div>
+                                <p class="text-dark">Vanilla Shots</p>
+                              </div>
+                              <div class="input-group w-auto justify-content-end align-items-center">
+                                <input type="number" step="1" max="9" min="0" value="0" name="VS" class="quantity-field border-1 text-center w-100">
+                              </div>
+                          </div>
+                        </div>
+                    <div class="col-12">
+                          <div class="d-flex justify-content-between">
+                              <div>
+                                <p class="text-dark">Caramel Shots</p>
+                              </div>
+                              <div class="input-group w-auto justify-content-end align-items-center">
+                                <input type="number" step="1" max="9" min="0" value="0" name="CaS" class="quantity-field border-1 text-center w-100">
+                              </div>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <div class="d-flex justify-content-between">
+                              <div>
+                                <p class="text-dark">Creamer</p>
+                              </div>
+                              <div class="input-group w-auto justify-content-end align-items-center">
+                                <input type="number" step="1" max="9" min="0" value="0" name="Crm" class="quantity-field border-1 text-center w-100">
+                              </div>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <div class="d-flex justify-content-between">
+                              <div>
+                                <p class="text-dark">Sugar</p>
+                              </div>
+                              <div class="input-group w-auto justify-content-end align-items-center">
+                                <input type="number" step="1" max="9" min="0" value="0" name="Sug" class="quantity-field border-1 text-center w-100">
+                              </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <button type="submit" class="btn btn-outline-dark" data-bs-dismiss="modal" name="order">Order</button>
+                    </div>
+                    </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Order Form for latte -->
+
+            <div class="modal fade" id="orderCF" tabindex="-1" aria-labelledby="brewCoffeeModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="brewCoffeeModalLabel">Drinks</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                  <form action="includes/orderCF.inc.php" method="post">
+                    <legend>Order!</legend>
+                    <div class="row mb-3">
+                        <label for="size" class="col-sm-2 col-form-label" id="label">Size: </label>
+                        <div class="col-sm-10">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="size" id="small" value="S" checked>
+                          <label class="form-check-label" for="small">
+                            Small
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="size" id="medium" value="M">
+                          <label class="form-check-label" for="medium">
+                            Medium
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="size" id="large" value="L">
+                          <label class="form-check-label" for="large">
+                            Large
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="size" id="XL" value="XL">
+                          <label class="form-check-label" for="XL">
+                            Extra Large
+                          </label>
+                        </div>
+                        </div>
+                    <div class="row">
+                        <div class="col-12">
+                          <div class="d-flex justify-content-between">
+                              <div>
+                                <p class="text-dark">Espresso Shots</p>
+                              </div>
+                              <div class="input-group w-auto justify-content-end align-items-center">
+                                <input type="number" step="1" max="9" min="0" value="0" name="ES" class="quantity-field border-1 text-center w-100">
+                              </div>
+                          </div>
+                        </div>
+                      <div class="col-12">
+                          <div class="d-flex justify-content-between">
+                              <div>
+                                <p class="text-dark">Chocolate Shots</p>
+                              </div>
+                              <div class="input-group w-auto justify-content-end align-items-center">
+                                <input type="number" step="1" max="9" min="0" value="0" name="CS" class="quantity-field border-1 text-center w-100">
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                          <div class="d-flex justify-content-between">
+                              <div>
+                                <p class="text-dark">Vanilla Shots</p>
+                              </div>
+                              <div class="input-group w-auto justify-content-end align-items-center">
+                                <input type="number" step="1" max="9" min="0" value="0" name="VS" class="quantity-field border-1 text-center w-100">
+                              </div>
+                          </div>
+                        </div>
+                    <div class="col-12">
+                          <div class="d-flex justify-content-between">
+                              <div>
+                                <p class="text-dark">Caramel Shots</p>
+                              </div>
+                              <div class="input-group w-auto justify-content-end align-items-center">
+                                <input type="number" step="1" max="9" min="0" value="0" name="CaS" class="quantity-field border-1 text-center w-100">
+                              </div>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <div class="d-flex justify-content-between">
+                              <div>
+                                <p class="text-dark">Creamer</p>
+                              </div>
+                              <div class="input-group w-auto justify-content-end align-items-center">
+                                <input type="number" step="1" max="9" min="0" value="0" name="Crm" class="quantity-field border-1 text-center w-100">
+                              </div>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <div class="d-flex justify-content-between">
+                              <div>
+                                <p class="text-dark">Sugar</p>
+                              </div>
+                              <div class="input-group w-auto justify-content-end align-items-center">
+                                <input type="number" step="1" max="9" min="0" value="0" name="Sug" class="quantity-field border-1 text-center w-100">
+                              </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <button type="submit" class="btn btn-outline-dark" data-bs-dismiss="modal" name="order">Order</button>
+                    </div>
+                    </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- order form for cup -->
+
+            <div class="modal fade" id="orderCP" tabindex="-1" aria-labelledby="brewCoffeeModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="brewCoffeeModalLabel">Drinks</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                  <form action="includes/orderCP.inc.php" method="post">
+                    <legend>Order!</legend>
+                    <div class="row mb-3">
+                        <label for="size" class="col-sm-2 col-form-label" id="label">Size: </label>
+                        <div class="col-sm-10">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="size" id="small" value="S" checked>
+                          <label class="form-check-label" for="small">
+                            Small
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="size" id="medium" value="M">
+                          <label class="form-check-label" for="medium">
+                            Medium
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="size" id="large" value="L">
+                          <label class="form-check-label" for="large">
+                            Large
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="size" id="XL" value="XL">
+                          <label class="form-check-label" for="XL">
+                            Extra Large
+                          </label>
+                        </div>
+                        </div>
+                    <div class="row">
+                        <div class="col-12">
+                          <div class="d-flex justify-content-between">
+                              <div>
+                                <p class="text-dark">Espresso Shots</p>
+                              </div>
+                              <div class="input-group w-auto justify-content-end align-items-center">
+                                <input type="number" step="1" max="9" min="0" value="0" name="ES" class="quantity-field border-1 text-center w-100">
+                              </div>
+                          </div>
+                        </div>
+                      <div class="col-12">
+                          <div class="d-flex justify-content-between">
+                              <div>
+                                <p class="text-dark">Chocolate Shots</p>
+                              </div>
+                              <div class="input-group w-auto justify-content-end align-items-center">
+                                <input type="number" step="1" max="9" min="0" value="0" name="CS" class="quantity-field border-1 text-center w-100">
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                          <div class="d-flex justify-content-between">
+                              <div>
+                                <p class="text-dark">Vanilla Shots</p>
+                              </div>
+                              <div class="input-group w-auto justify-content-end align-items-center">
+                                <input type="number" step="1" max="9" min="0" value="0" name="VS" class="quantity-field border-1 text-center w-100">
+                              </div>
+                          </div>
+                        </div>
+                    <div class="col-12">
+                          <div class="d-flex justify-content-between">
+                              <div>
+                                <p class="text-dark">Caramel Shots</p>
+                              </div>
+                              <div class="input-group w-auto justify-content-end align-items-center">
+                                <input type="number" step="1" max="9" min="0" value="0" name="CaS" class="quantity-field border-1 text-center w-100">
+                              </div>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <div class="d-flex justify-content-between">
+                              <div>
+                                <p class="text-dark">Creamer</p>
+                              </div>
+                              <div class="input-group w-auto justify-content-end align-items-center">
+                                <input type="number" step="1" max="9" min="0" value="0" name="Crm" class="quantity-field border-1 text-center w-100">
+                              </div>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <div class="d-flex justify-content-between">
+                              <div>
+                                <p class="text-dark">Sugar</p>
+                              </div>
+                              <div class="input-group w-auto justify-content-end align-items-center">
+                                <input type="number" step="1" max="9" min="0" value="0" name="Sug" class="quantity-field border-1 text-center w-100">
+                              </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <button type="submit" class="btn btn-outline-dark" data-bs-dismiss="modal" name="order">Order</button>
+                    </div>
+                    </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          <!-- Order form for Americano -->
+          <div class="modal fade" id="orderA" tabindex="-1" aria-labelledby="brewCoffeeModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="brewCoffeeModalLabel">Drinks</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                  <form action="includes/orderA.inc.php" method="post">
+                    <legend>Order!</legend>
+                    <div class="row mb-3">
+                        <label for="size" class="col-sm-2 col-form-label" id="label">Size: </label>
+                        <div class="col-sm-10">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="size" id="small" value="S" checked>
+                          <label class="form-check-label" for="small">
+                            Small
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="size" id="medium" value="M">
+                          <label class="form-check-label" for="medium">
+                            Medium
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="size" id="large" value="L">
+                          <label class="form-check-label" for="large">
+                            Large
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="size" id="XL" value="XL">
+                          <label class="form-check-label" for="XL">
+                            Extra Large
+                          </label>
+                        </div>
+                        </div>
+                    <div class="row">
+                        <div class="col-12">
+                          <div class="d-flex justify-content-between">
+                              <div>
+                                <p class="text-dark">Espresso Shots</p>
+                              </div>
+                              <div class="input-group w-auto justify-content-end align-items-center">
+                                <input type="number" step="1" max="9" min="0" value="0" name="ES" class="quantity-field border-1 text-center w-100">
+                              </div>
+                          </div>
+                        </div>
+                      <div class="col-12">
+                          <div class="d-flex justify-content-between">
+                              <div>
+                                <p class="text-dark">Chocolate Shots</p>
+                              </div>
+                              <div class="input-group w-auto justify-content-end align-items-center">
+                                <input type="number" step="1" max="9" min="0" value="0" name="CS" class="quantity-field border-1 text-center w-100">
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                          <div class="d-flex justify-content-between">
+                              <div>
+                                <p class="text-dark">Vanilla Shots</p>
+                              </div>
+                              <div class="input-group w-auto justify-content-end align-items-center">
+                                <input type="number" step="1" max="9" min="0" value="0" name="VS" class="quantity-field border-1 text-center w-100">
+                              </div>
+                          </div>
+                        </div>
+                    <div class="col-12">
+                          <div class="d-flex justify-content-between">
+                              <div>
+                                <p class="text-dark">Caramel Shots</p>
+                              </div>
+                              <div class="input-group w-auto justify-content-end align-items-center">
+                                <input type="number" step="1" max="9" min="0" value="0" name="CaS" class="quantity-field border-1 text-center w-100">
+                              </div>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <div class="d-flex justify-content-between">
+                              <div>
+                                <p class="text-dark">Creamer</p>
+                              </div>
+                              <div class="input-group w-auto justify-content-end align-items-center">
+                                <input type="number" step="1" max="9" min="0" value="0" name="Crm" class="quantity-field border-1 text-center w-100">
+                              </div>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <div class="d-flex justify-content-between">
+                              <div>
+                                <p class="text-dark">Sugar</p>
+                              </div>
+                              <div class="input-group w-auto justify-content-end align-items-center">
+                                <input type="number" step="1" max="9" min="0" value="0" name="Sug" class="quantity-field border-1 text-center w-100">
+                              </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <button type="submit" class="btn btn-outline-dark" data-bs-dismiss="modal" name="order">Order</button>
+                    </div>
+                    </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!-- order form for hot choco -->
+          <div class="modal fade" id="orderHC" tabindex="-1" aria-labelledby="brewCoffeeModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="brewCoffeeModalLabel">Drinks</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                  <form action="includes/orderHC.inc.php" method="post">
+                    <legend>Order!</legend>
+                    <div class="row mb-3">
+                        <label for="size" class="col-sm-2 col-form-label" id="label">Size: </label>
+                        <div class="col-sm-10">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="size" id="small" value="S" checked>
+                          <label class="form-check-label" for="small">
+                            Small
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="size" id="medium" value="M">
+                          <label class="form-check-label" for="medium">
+                            Medium
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="size" id="large" value="L">
+                          <label class="form-check-label" for="large">
+                            Large
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="size" id="XL" value="XL">
+                          <label class="form-check-label" for="XL">
+                            Extra Large
+                          </label>
+                        </div>
+                        </div>
+                    <div class="row">
+                        <div class="col-12">
+                          <div class="d-flex justify-content-between">
+                              <div>
+                                <p class="text-dark">Espresso Shots</p>
+                              </div>
+                              <div class="input-group w-auto justify-content-end align-items-center">
+                                <input type="number" step="1" max="9" min="0" value="0" name="ES" class="quantity-field border-1 text-center w-100">
+                              </div>
+                          </div>
+                        </div>
+                      <div class="col-12">
+                          <div class="d-flex justify-content-between">
+                              <div>
+                                <p class="text-dark">Chocolate Shots</p>
+                              </div>
+                              <div class="input-group w-auto justify-content-end align-items-center">
+                                <input type="number" step="1" max="9" min="0" value="0" name="CS" class="quantity-field border-1 text-center w-100">
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                          <div class="d-flex justify-content-between">
+                              <div>
+                                <p class="text-dark">Vanilla Shots</p>
+                              </div>
+                              <div class="input-group w-auto justify-content-end align-items-center">
+                                <input type="number" step="1" max="9" min="0" value="0" name="VS" class="quantity-field border-1 text-center w-100">
+                              </div>
+                          </div>
+                        </div>
+                    <div class="col-12">
+                          <div class="d-flex justify-content-between">
+                              <div>
+                                <p class="text-dark">Caramel Shots</p>
+                              </div>
+                              <div class="input-group w-auto justify-content-end align-items-center">
+                                <input type="number" step="1" max="9" min="0" value="0" name="CaS" class="quantity-field border-1 text-center w-100">
+                              </div>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <div class="d-flex justify-content-between">
+                              <div>
+                                <p class="text-dark">Creamer</p>
+                              </div>
+                              <div class="input-group w-auto justify-content-end align-items-center">
+                                <input type="number" step="1" max="9" min="0" value="0" name="Crm" class="quantity-field border-1 text-center w-100">
+                              </div>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <div class="d-flex justify-content-between">
+                              <div>
+                                <p class="text-dark">Sugar</p>
+                              </div>
+                              <div class="input-group w-auto justify-content-end align-items-center">
+                                <input type="number" step="1" max="9" min="0" value="0" name="Sug" class="quantity-field border-1 text-center w-100">
+                              </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <button type="submit" class="btn btn-outline-dark" data-bs-dismiss="modal" name="order">Order</button>
+                    </div>
+                    </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!--   Order form for lemonade  -->
+          
+          <div class="modal fade" id="orderL" tabindex="-1" aria-labelledby="brewCoffeeModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="brewCoffeeModalLabel">Drinks</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                  <form action="includes/orderL.inc.php" method="post">
+                    <legend>Order!</legend>
+                    <div class="row mb-3">
+                        <label for="size" class="col-sm-2 col-form-label" id="label">Size: </label>
+                        <div class="col-sm-10">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="size" id="small" value="S" checked>
+                          <label class="form-check-label" for="small">
+                            Small
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="size" id="medium" value="M">
+                          <label class="form-check-label" for="medium">
+                            Medium
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="size" id="large" value="L">
+                          <label class="form-check-label" for="large">
+                            Large
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="size" id="XL" value="XL">
+                          <label class="form-check-label" for="XL">
+                            Extra Large
+                          </label>
+                        </div>
+                        </div>
+                    <div class="container">
+                        <button type="submit" class="btn btn-outline-dark" data-bs-dismiss="modal" name="order">Order</button>
+                    </div>
+                    </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Order for Steep Tea -->
+
+            <div class="modal fade" id="orderST" tabindex="-1" aria-labelledby="brewCoffeeModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="brewCoffeeModalLabel">Drinks</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                  <form action="includes/orderST.inc.php" method="post">
+                    <legend>Order!</legend>
+                    <div class="row mb-3">
+                        <label for="size" class="col-sm-2 col-form-label" id="label">Size: </label>
+                        <div class="col-sm-10">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="size" id="small" value="S" checked>
+                          <label class="form-check-label" for="small">
+                            Small
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="size" id="medium" value="M">
+                          <label class="form-check-label" for="medium">
+                            Medium
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="size" id="large" value="L">
+                          <label class="form-check-label" for="large">
+                            Large
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="size" id="XL" value="XL">
+                          <label class="form-check-label" for="XL">
+                            Extra Large
+                          </label>
+                        </div>
+                        </div>
+                    <div class="container">
+                        <button type="submit" class="btn btn-outline-dark" data-bs-dismiss="modal" name="order">Order</button>
+                    </div>
+                    </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+          <!--  Order form for Croissant  -->
+
+          <div class="modal fade" id="orderCS" tabindex="-1" aria-labelledby="brewCoffeeModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="brewCoffeeModalLabel">Bakery</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                  <form action="includes/orderCS.inc.php" method="post">
+                    <legend>Order!</legend>
+                    <div class="row">
+                        <div class="col-12">
+                          <div class="d-flex justify-content-between">
+                              <div>
+                                <p class="text-dark">Quantity</p>
+                              </div>
+                              <div class="input-group w-auto justify-content-end align-items-center">
+                                <input type="number" step="1" max="9" min="1" value="1" name="Qn" class="quantity-field border-1 text-center w-100">
+                              </div>
+                          </div>
+                        </div>
+                    <div class="container">
+                        <button type="submit" class="btn btn-outline-dark" data-bs-dismiss="modal" name="order">Order</button>
+                    </div>
+                    </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Order for Muffin --> 
+
+            <div class="modal fade" id="orderM" tabindex="-1" aria-labelledby="brewCoffeeModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="brewCoffeeModalLabel">Bakery</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                  <form action="includes/orderM.inc.php" method="post">
+                    <legend>Order!</legend>
+                    <div class="row">
+                        <div class="col-12">
+                          <div class="d-flex justify-content-between">
+                              <div>
+                                <p class="text-dark">Quantity</p>
+                              </div>
+                              <div class="input-group w-auto justify-content-end align-items-center">
+                                <input type="number" step="1" max="9" min="1" value="1" name="Qn" class="quantity-field border-1 text-center w-100">
+                              </div>
+                          </div>
+                        </div>
+                    <div class="container">
+                        <button type="submit" class="btn btn-outline-dark" data-bs-dismiss="modal" name="order">Order</button>
+                    </div>
+                    </form>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -411,17 +1139,18 @@
                 </div>
               </div>
             </div>
-
-        
-
           </div>
         </div>
       </div>
 
 
     </main>
-        <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
 <?php 
+  if(isset($_GET["error"])){
+    if($_GET["error"] == "orderPlaced"){
+        echo '<script>alert("Order Placed!")</script>';
+    }
+  }
   include_once 'footer.php';
 ?>

@@ -69,6 +69,9 @@
         else if($_GET["error"] == "incorrectPasssword"){
             echo '<script>alert("Entered password is not correct")</script>';
         }
+        else if ($_GET["error"] == "sessionError"){
+            echo '<script>alert("Please Login")</script>';
+        }
         else if($_GET["error"] == "none"){
             echo '<script>alert("Registration successful!")</script>';
         }

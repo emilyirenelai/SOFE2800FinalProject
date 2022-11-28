@@ -48,13 +48,13 @@
                 <!-- Left links -->
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link" href="index.php" id="home"><b>Home</b></a>
+                    <a class="nav-link" href="home.php" id="home" style="color: #CB9173;"><b>Home</b></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="menu.php" id="orders"><b>Orders</b></a>
+                    <a class="nav-link" href="menu.php" id="orders" style="color: #CB9173;"><b>Orders</b></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#" id="about"><b>About Us</b></a>
+                    <a class="nav-link" href="aboutus.php" id="about" style="color: #CB9173;"><b>About Us</b></a>
                   </li>
                 </ul>
                 <!-- Left links -->
@@ -67,16 +67,16 @@
                   echo '<span class="navbar-text w-100">Welcome ' . $_SESSION["name"] . '</span>';
                   echo '<ul class="navbar-nav me-auto mb-2 mb-lg-0">';
                   echo '<li class="nav-item">';
-                  echo '<a class="nav-link" href="includes/signout.inc.php">Sign out</a>';
+                  echo '<a class="nav-link" href="includes/signout.inc.php" style="color: #CB9173;">Sign out</a>';
                   echo '</li>';
                 }
                 else{
                   echo '<ul class="navbar-nav me-auto mb-2 mb-lg-0">';
                     echo '<li class="nav-item">';
-                      echo '<a class="nav-link" id="signup" href="signup.php">Sign up</a>';
+                      echo '<a class="nav-link" id="signup" href="signup.php" style="color: #CB9173;">Sign up</a>';
                     echo '</li>';
                     echo '<li class="nav-item">';
-                        echo '<a class="nav-link" id="login" href="login.php">Login</a>';
+                        echo '<a class="nav-link" id="login" href="login.php" style="color: #CB9173;">Login</a>';
                       echo '</li>';
                 }
               ?>
