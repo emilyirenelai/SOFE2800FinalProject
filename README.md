@@ -2,4 +2,4 @@
 # SOFE2800 (Web Programming) Final Project
 # Fall 2022
 # Coffee shop website prototype
-# Coding languages used: 
+# Coding languages used: JavaScript
