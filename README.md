@@ -30,4 +30,6 @@ login.php --> Login page by @kunalpanda
 
 menu.html, menu.php, menuStyle.css --> Menu page by @emilyirenelai
 
-signup.php, temp.html, var.php --> Login for existing users by @kunalpanda 
+signup.php --> Login for existing users by @kunalpanda 
+
+temp.html --> Launch demo
