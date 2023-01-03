@@ -8,3 +8,4 @@
 # aboutus.html, aboutus.css, aboutus.php --> About Us page
 # animations.js --> Animations for menu page
 # brewcoffeeanim.js --> Testing animations for menu page
+# footer.php --> Website footer across all pages
