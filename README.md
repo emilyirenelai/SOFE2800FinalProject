@@ -5,4 +5,5 @@
 # Coding languages used: JavaScript, HTML, CSS, SQL (MySQL), PHP
 # Files:
 # menuimg folder --> images and gifs for menu page
-# aboutus.html, aboutus. css --> About Us page
+# aboutus.html, aboutus.css, aboutus.php --> About Us page
+# animations.js --> Animations for menu page
