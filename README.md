@@ -4,4 +4,4 @@
 # Coffee shop website prototype, for business "Kaffa"
 # Coding languages used: JavaScript, HTML, CSS, SQL (MySQL), PHP
 # Files:
-# menuimg folder: images for menu page
+# menuimg folder: images and gifs for menu page
