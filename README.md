@@ -3,4 +3,4 @@
 # Fall 2022
 # Coffee shop website prototype, for business "Kaffa"
 # Coding languages used: JavaScript, HTML, CSS, SQL (MySQL), PHP
-# Pages:
+# Files:
