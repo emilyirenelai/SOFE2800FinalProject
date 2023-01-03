@@ -7,3 +7,4 @@
 # menuimg folder --> images and gifs for menu page
 # aboutus.html, aboutus.css, aboutus.php --> About Us page
 # animations.js --> Animations for menu page
+# brewcoffeeanim.js --> Testing animations for menu page
