@@ -9,3 +9,4 @@
 # animations.js --> Animations for menu page
 # brewcoffeeanim.js --> Testing animations for menu page
 # footer.php --> Website footer across all pages
+# header.php --> Website header across all pages
