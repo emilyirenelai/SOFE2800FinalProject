@@ -28,3 +28,5 @@ index.css, index.php --> Code to insert header and footer by @/kunalpanda
 
 login.php --> Login page by @/kunalpanda
 
+menu.html, menu.php, menuStyle.css --> Menu page by @emilyirenelai
+
