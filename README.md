@@ -23,3 +23,8 @@ header.php --> Website header across all pages by @/kunalpanda
 home.html, home.js, home.php --> Homepage draft by @/Damru03
 
 homepage.css, homepage.html, homepage.php --> Homepage by @/emilyirenelai
+
+index.css, index.php --> Code to insert header and footer by @/kunalpanda
+
+login.php --> Login page by @/kunalpanda
+
